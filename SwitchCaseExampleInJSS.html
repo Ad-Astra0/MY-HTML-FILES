@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head><title>Morning</title>
+</head>
+<body>
+<h2>Write a fruit and click the "Try it" button.</h2>
+<h3>The switch statement will execute a block of code based on your input.</h3>
+<input type="text" id="f"/>
+<button name="Try it" onclick="i()">Try it</button>
+<p id="g"></p>
+<script> 
+function i()
+{
+var fruit,text;
+fruit=document.getElementById("f").value;
+
+	switch(fruit)
+	{
+	case "Banana": 
+	text="Banana is good"; 
+	break; 
+	case "Apple": 
+	text="Apple is good";
+	break; 
+	case "Grape":
+	text="Grape is good";
+	break; 
+	default: 
+	text="I have not heard of this fruit before!";
+	break; 
+	}
+	document.getElementById("g").innerHTML=text; 
+}
+</script>
+</body>
+</html>

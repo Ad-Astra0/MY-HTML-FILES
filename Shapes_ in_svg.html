@@ -1,0 +1,26 @@
+<!DOCTYPE HTML> 
+<html> 
+<head> <title>HD</title>
+</head>
+<body> 
+<svg width="700" height="700">
+<text x="400" y="380" transform="rotate(10 20,20)">How ya doing</text> 
+<ellipse filter="url(#f2)" cx="400" cy="150" rx="80" ry="30" stroke="green" stroke-width="4" fill="blue"/>
+<line x1="180" y1="220" x2="180" y2="360" stroke="yellow" stroke-width="6" fill="orange"/>
+<polygon filter="url(#f1)" points="230,250,350,250,400,400,300,398" stroke="red" stroke-width="2" fill="green"/>
+<defs>
+<filter id="f1" x="0" y="0"> 
+<feGaussianBlur in="SourceGraphic" stdDeviation="12"/>
+</filter>
+<filter id="f2" x="0" y="0" width="200%" height="200%">
+      <feOffset result="offOut" in="SourceGraphic" dx="20" dy="20" />
+      <feGaussianBlur result="blurOut" in="offOut" stdDeviation="10" />
+      <feBlend in="SourceGraphic" in2="offOut" mode="normal" />
+    </filter>
+</defs>
+ <rect width="90" height="90" stroke="green" stroke-width="3"
+  fill="yellow" filter="url(#f2)" />
+</svg>
+<h1> Testing</h1>
+</body>
+</html> 

@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html> 
+<head> 
+<title>HeLlO</title>
+</head> 
+<body>
+<p> Write a number between 100-298:</p>
+<input id="f" type="number" min="100" max="298"> 
+<button onclick="g()">Enter</button>
+<script>
+function g()
+{
+var hi=document.getElementById("f");
+	if(hi.validity.rangeUnderflow)
+	{
+	document.getElementById("L").innerHTML="Value to small"; 
+	}
+	else
+	{
+	document.getElementById("L").innerHTML="input okay";
+	}
+}
+</script>
+<p id="L"></p>
+</body>
+</html>

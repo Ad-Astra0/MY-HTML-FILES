@@ -1,0 +1,10 @@
+create database library;
+use library; 
+create table book(isbn int PRIMARY KEY,BookName varchar(20) NOT NULL,author_name varchar(20) NOT NULL,genre varchar(20),price float, quantity int); 
+desc book;
+alter table book add published int;
+desc book;
+alter table book modify published date;
+desc book;
+alter table book drop published;
+desc book;

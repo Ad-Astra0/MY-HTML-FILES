@@ -1,0 +1,31 @@
+<!DOCTYPE HTML> 
+<html> 
+<head>
+<title>NONE</title> 
+</head>
+<body>
+<p id="good"></p>
+<h1> HELLO
+<h2>Blank
+<h3>Blank 
+<br>
+<svg width="400" height="300">
+	<defs>
+	<filter id="f1" x="0" y="0">
+	<feOffset result="offOut" in="SourceGraphic" dx="20" dy="20" />
+<feGaussianBlur result="blurOut" in="offOut" stdDeviation="10" />
+<feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+	</filter>
+	</defs>
+	<rect width="90" height="90" stroke="green" stroke-width="3" fill="yellow" filter="url(#f1)" />
+Sorry, your browser does not support inline SVG.
+</svg>
+<br><input type="button" value="off" onclick="off()" id="o"/>
+<script>
+function off()
+{
+document.body.style.backgroundColor="skyblue";
+}
+</script> 
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html> 
+<head><title>Blank</title> 
+</head>
+<body>
+	Enter a number &nbsp;&nbsp;&nbsp;<input type="text" id="number1"/> <br><br> 
+	Enter second number &nbsp;&nbsp;&nbsp; <input type="text" id="number2"/><br><br> 
+	Result is &nbsp;&nbsp;&nbsp; <input type="text" id="total"/><br><br>
+	<button name="Addition" onclick="k()" >Addition</button> 
+	<button name="Sub" onclick="v()">Subtraction</button> 
+	<button name="Multi" onclick="r()">Multipication</button> 
+	<button name="Divi" onclick="b()">Divison</button> 
+	<p id="h"></p>
+<script> 
+prompt('Enter the first number ');
+var m; 
+var g; 
+function k()
+{ 
+m=document.getElementById("number1").value; 
+g=document.getElementById("number2").value;
+document.getElementById("total").value=Number(m)+Number(g);
+}
+function v()
+{
+m=document.getElementById("number1").value; 
+g=document.getElementById("number2").value;
+document.getElementById("total").value=Number(m)-Number(g);
+}
+function r()
+{
+m=document.getElementById("number1").value; 
+g=document.getElementById("number2").value;
+document.getElementById("total").value=Number(m)*Number(g);
+}
+function b()
+{
+m=document.getElementById("number1").value; 
+g=document.getElementById("number2").value;
+document.getElementById("total").value=m/g;
+}
+</script>
+</body>
+</html>

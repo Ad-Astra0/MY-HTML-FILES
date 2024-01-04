@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<script>
+var pro = parseInt(prompt("Enter a number to begin the Mathematicas quiz"));
+function checkvalue()
+{
+	
+	var x = Number.isInteger(pro);
+	if(x==true)
+	{document.getElementById("p2").innerHTML=" ";} 
+	else
+	{	pro = parseInt(prompt("Enter a number to begin the Mathematicas quiz"));
+		checkvalue();
+	}
+	
+}
+</script>
+<body onload="checkvalue()">
+<p id="p"></p>
+<p id="p1"></p>
+<p id="p2"></p>
+<h1>Welcome to my first wepage, hope you enjoy it!!!<br><br></h1>
+
+<p id="q"> Question 1: You have 4 red bubbles, 6 yellow bubbles, and 4 bubbles. What is the probability that the red one will be chosen?
+(Not only choose a correct answer, but the fraction also needs <b>to be simplified</b>)</p><br>
+<input type="radio" id="Q1_a" name="Question_1" value="4/14"><label>4/14</label><br>
+<input type="radio" id="Q1_b" name="Question_1"  value="6/7"><label>6/7</label><br>
+<input type="radio" id="Q1_c" name="Question_1" value="2/7"><label>2/7</label><br>
+	<p id="q2"> Question 2: What does "a" equal; when a+5=9.</p><br>
+	<input type="radio" name="Question_2" id="Q2_a" value="4.6677890">4.6677890<br>
+	<input type="radio" name="Question_2" id="Q2_b" value="4">4<br>
+<p id="q3"> Question 3: A person wants the average number of cookies a person buys. He surveys 10 people, to see the amount of cookies they buy. 
+<b>These numbers are listed from least to greastest</b> 0,0,1,2,3,6,7,8,9,11. What is the median??????</p><br>
+	<input type="radio" name="Question_3" id="Q3_a" value="3">3 <br>
+	<input type="radio" name="Question_3" id="Q3_b" value="The middle of the values.">The middle of the values. <br>
+	<input type="radio" name="Question_3" id="Q3_c" value="All of the above">All of the above<br>
+<p id="q4"> Question 4: What is the volume of this rectangle??? Height=5cm; Width=6cm; Base=12cm;</p><br>
+	<input type="radio" name="Question_4" id="Q4_a" value="360">360<br>
+	<input type="radio" name="Question_4" id="Q4_b" value="4,443.98">4,443.98<br>
+	<input type="radio" name="Question_4" id="Q4_c" value="1000% a mistake.">1000% a mistake.<br><br>
+<button onclick="myFunction()">Calculate Score</button>
+<p id="score"></p><br>
+<p>"The correct number of score(s) is:"</p>
+<button onclick="showcorrectanswers()">Click here to see the answers</button>
+
+	<br>Question 1:<p id="ans1"></p>
+	Question 2:<p id="ans2"></p>
+	Question 3:<p id="ans3"></p>
+	Question 4:<p id="ans4"></p>
+<script>
+var totalscore;
+totalscore=0;
+function myFunction() {
+      
+    if (document.getElementById("Q1_c").checked) {
+     
+	totalscore=totalscore+1;     
+    }
+
+    if (document.getElementById("Q2_b").checked) {
+      
+	totalscore=totalscore+1;    
+    }
+    if (document.getElementById("Q3_a").checked) {
+     
+	totalscore=totalscore+1;     
+    }
+
+    if (document.getElementById("Q4_a").checked) {
+      	totalscore=totalscore+1;     
+    }
+
+document.getElementById("score").innerHTML = totalscore;  
+}
+ function showcorrectanswers()
+{
+document.getElementById("ans1").innerHTML = "correct answer is 2/7";    
+document.getElementById("ans2").innerHTML = "correct answer is 4"; 
+document.getElementById("ans3").innerHTML = "Correct answer is 3 "; 
+document.getElementById("ans4").innerHTML = "Correct answer is 360 "; 
+
+}
+
+
+</script>
+
+</body>
+</html>

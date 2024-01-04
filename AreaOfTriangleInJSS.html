@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+<head><title>Area of triangle</title>
+<script> 
+var base=prompt('Enter the value of base'); 
+var height=prompt('Enter the value of height');
+
+function area()
+{
+var area=0.5*base*height; 
+document.getElementById("a").innerHTML=area;
+}
+function display()
+{
+document.getElementById("base").innerHTML=base; 
+document.getElementById("height").innerHTML=height; 
+}
+</script>
+</head>
+<body onload="display()">
+
+Base is<p id=base>  </p>
+Height is<p id=height>  </p><br>
+<button onclick="area()">Caluate area</button>
+Area is:<p id=a> </p>
+</body>
+</html>

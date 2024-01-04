@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head><title> AFTERNOON</title> 
+</head> 
+<body>
+<p id="k">The two numbers are:1 and 2</p>
+<input type="button" value="+" onclick="plus()"/>
+<input type="button" value="-" onclick="Minus()"/> 
+<input type="button" value="*" onclick="Times()"/>
+<input type="button" value="/" onclick="Division()"/>
+<p id="h"></p><br>
+<p id="l"></p><br>
+<p id="i"></p><br>
+<p id="g"></p><br>
+<script>
+var num=1;
+var num1=2; 
+function plus()
+{ 
+document.getElementById('h').innerHTML=num+num1;
+}
+function Minus()
+{
+document.getElementById('l').innerHTML=num-num1; 
+}
+function Times()
+{
+document.getElementById('i').innerHTML=num*num1; 
+}
+function Division()
+{
+document.getElementById('g').innerHTML=num/num1;
+}
+</script> 
+</body>
+</html>
